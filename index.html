@@ -1,12 +1,691 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevDash</title>
+
+    <!--Bootstrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        body {
+            background-color: hsl(25, 100%, 94%);
+            /* background-color: rgb(154, 154, 236); */
+        }
+
+        .apna_color {
+            color: hsl(26, 100%, 48%);
+        }
+
+        #mainNav a:hover {
+            color: hsl(26, 100%, 55%);
+        }
+
+        .nav-link:after {
+            content: "";
+            display: block;
+            height: 3px;
+            background: hsl(26, 95%, 49%);
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+
+        .nav-link:hover:after {
+            color: hsl(26, 95%, 49%);
+            width: 100%;
+        }
+
+        .blog-image img {
+            background-color: hsl(26, 95%, 49%);
+        }
+
+        .img-slid {
+            border-radius: 30px;
+        }
+
+        .blog-image {
+            margin-left: -80px;
+        }
+
+        .btn-orange {
+            color: white;
+            background-color: hsl(26, 95%, 49%);
+
+        }
+
+        #cart_btn:hover {
+            color: grey;
+        }
+        #footer p{
+            margin: 5px 0px;
+        }
+        #footer{
+            background-image: url("images/world_pattern.svg");
+            background-color: #2D2B3A;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        .copyright{
+            background-color: #2D2B3A;
+        }
+
+        .section-head {
+      color: #000;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-head:after {
+      background: #e74c3c;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      margin: 20px auto;
+    }
+
+        .timez {
+      border-top: 5px solid #d20909;
+      position: relative;
+      bottom: 0;
+      transition: bottom ease 0.5s;
+    }
+
+    .timez img {
+      padding: 24px;
+      transition: all linear 0.25s;
+    }
+
+    .timez:hover img {
+      padding: 30px;
+    }
+
+    .timez:hover {
+      bottom: -10px;
+      background-color: #f5f0f0;
+    }
+    .timez:hover h5{
+      color:#d20909;
+    }
+    
+    </style>
 </head>
+
 <body>
-    <h1>BinaryBrains</h1>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top py-2" id="mainNav">
+
+        <a href="#" class="navbar-brand text-uppercase font-weight-bold">
+            <img src="images/Screenshot 2023-04-20 223908.png" height="50" alt="" class="mr-1">
+
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#header_options">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="header_options">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="" class="nav-link text-uppercase font-weight-bold">Home</a>
+                </li>
+
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link text-uppercase font-weight-bold" href="#trnding-coll">
+                        Collections
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link text-uppercase font-weight-bold" href="#men-coll">
+                        Men
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link text-uppercase font-weight-bold" href="#women-coll">
+                        Women
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link text-uppercase font-weight-bold" href="#">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link text-uppercase font-weight-bold" href="#">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <a class="btn btn-orange font-weight-bold ml-auto" id="cart_btn" href="#">
+                <i class="bi bi-cart"></i> Cart
+            </a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col offset-md-1">
+                    <div class="bg-white mb-4 d-lg-flex shadow img-slid border border-warning">
+                        <div class="blog-image d-none d-lg-block align-items-center p-3">
+                            <img src="images/download (1)-min.webp" alt="" width="850px" class="img-fluid img-slid shadow">
+                        </div>
+                        <!-- <div class="d-block d-lg-none align-items-center p-3">
+							<img src="shadowas.jpeg" alt="" class="img-fluid img-slid shadow" height="150px">
+						</div> -->
+                        <div class="p-4 blog-container">
+                            <h4 class="mt-2 font-weight-bold">
+                                <p class="text-dark">Be the <strong
+                                        class="apna_color text-uppercase">TrendSetter</strong> in this pair of stylish
+                                    sneakers from Premium Brands.</p>
+                            </h4>
+                            <p class="text-muted">These low-profile sneakers are your perfect casual wear companion.
+                                Featuring a durable rubber outer sole, they’ll withstand everything the weather can
+                                offer.</p>
+                            <div class="d-flex justify-content-between align-items-center border-top">
+                                <div class="mt-4 mx-auto">
+                                    <a href="#!" class="btn btn-orange font-weight-bold">Explore Our Collection</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-4 mt-3 my-5" id="trnding-coll">
+        <div class="container-fluid cards">
+            <h2 class="text-center text-uppercase text-dark font-weight-bold section-head" data-aos="fade-up">Trending Collections
+            </h2>
+            <div class="row m-auto" data-aos="fade-up">
+                
+                <div class="col-10 owl-carousel owl-theme mx-auto" id="owl-cor1">
+
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top img-fluid p-4 rounded" src="https://media.gq.com/photos/63e2b83e195df51b3831ad33/master/w_1280,c_limit/Hoka-Bondi-8-shoes.png" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Hoka Bondi 8 shoes pair of 2</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top p-4" src="https://media.gq.com/photos/6102da8d00629082f58db8a8/master/w_1280,c_limit/Asics-Gel-Excite-trail-running-shoes.jpg" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Asics Gel-Excite trail running shoes</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top p-4" src="https://media.gq.com/photos/63e2b84cb154da9c87cdfc1b/master/w_1280,c_limit/Saucony-ProGrid-Triumph-4-shoes.png" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Saucony ProGrid Triumph 4 shoes</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top p-4" src="https://media.gq.com/photos/63e2bc651ff05e504d450078/master/w_1280,c_limit/Reebok-Nano-X2-TR-Adventure-shoe.jpg" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Reebok Nano X2 TR Adventure shoe</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top p-4" src="https://media.gq.com/photos/63e2bc651ff05e504d450078/master/w_1280,c_limit/Reebok-Nano-X2-TR-Adventure-shoe.jpg" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Reebok Nano X2 TR Adventure shoe</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top p-4" src="https://media.gq.com/photos/63e2bc651ff05e504d450078/master/w_1280,c_limit/Reebok-Nano-X2-TR-Adventure-shoe.jpg" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Reebok Nano X2 TR Adventure shoe</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top p-4" src="https://media.gq.com/photos/63e2bc651ff05e504d450078/master/w_1280,c_limit/Reebok-Nano-X2-TR-Adventure-shoe.jpg" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Reebok Nano X2 TR Adventure shoe</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top p-4" src="https://media.gq.com/photos/63e2bc651ff05e504d450078/master/w_1280,c_limit/Reebok-Nano-X2-TR-Adventure-shoe.jpg" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Reebok Nano X2 TR Adventure shoe</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card timez shadow-sm">
+                            <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                in-stock</div>
+                            <img class="card-img-top p-4" src="https://media.gq.com/photos/63e2bc651ff05e504d450078/master/w_1280,c_limit/Reebok-Nano-X2-TR-Adventure-shoe.jpg" alt="..." />
+                            <div class="card-body p-2">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Reebok Nano X2 TR Adventure shoe</h5>
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <span>$125.00 50% $250.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer pb-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                        href="#">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-4 mt-3 my-5" id="men-coll">
+        <div class="container-fluid cards">
+            <h2 class="text-center text-uppercase text-dark font-weight-bold section-head" data-aos="fade-up">Mens Collections
+            </h2>
+            <div class="row m-auto" data-aos="fade-up">
+
+                <div class="col-md-3 p-1">
+                    <div class="card timez shadow-sm">
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                              out-of-stock
+                        </div>
+                        <img class="card-img-top img-fluid p-2 rounded" src="new img/Hoka-Anacapa-low-Gore-Tex-shoes.webp" alt="..." />
+                        <div class="card-body p-2">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Hoka Bondi 8 shoes</h5>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <span>$125.00 50% $250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pb-2 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="card timez shadow-sm">
+                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            in-stock</div>
+                        <img class="card-img-top p-2" src="new img/Reebok-Nano-X2-TR-Adventure-shoe.webp" alt="..." />
+                        <div class="card-body p-2">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Asics Gel-Excite trail running</h5>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <span>$125.00 50% $250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pb-2 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="card timez shadow-sm">
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            out-of-stock</div>
+                        <img class="card-img-top p-2" src="new img/Salomon-Acs-Pro-shoes.webp" alt="..." />
+                        <div class="card-body p-2">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Saucony ProGrid Triumph 4</h5>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <span>$125.00 50% $250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pb-2 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="card timez shadow-sm">
+                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            in-stock</div>
+                        <img class="card-img-top p-2" src="new img/Saucony-ProGrid-Triumph-4-shoes (Small).jpeg" alt="..." />
+                        <div class="card-body p-2">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Reebok Nano X2 TR Adventure</h5>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <span>$125.00 50% $250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pb-2 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="pt-4 mt-3 my-5" id="women-coll">
+        <div class="container-fluid cards">
+            <h2 class="text-center text-uppercase text-dark font-weight-bold section-head" data-aos="fade-up">WoMens Collections
+            </h2>
+            <div class="row m-auto" data-aos="fade-up">
+
+                <div class="col-md-3 p-1">
+                    <div class="card timez shadow-sm">
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                              out-of-stock
+                        </div>
+                        <img class="card-img-top img-fluid p-2 rounded" src="new img/women1.webp" alt="..." />
+                        <div class="card-body p-2">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Hoka Bondi 8 shoes</h5>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <span>$125.00 50% $250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pb-2 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="card timez shadow-sm">
+                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            in-stock</div>
+                        <img class="card-img-top p-2" src="new img/women2.webp" alt="..." />
+                        <div class="card-body p-2">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Asics Gel-Excite trail running</h5>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <span>$125.00 50% $250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pb-2 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="card timez shadow-sm">
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            out-of-stock</div>
+                        <img class="card-img-top p-2" src="new img/women3.webp" alt="..." />
+                        <div class="card-body p-2">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Saucony ProGrid Triumph 4</h5>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <span>$125.00 50% $250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pb-2 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="card timez shadow-sm">
+                        <div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                            in-stock</div>
+                        <img class="card-img-top p-2" src="new img/women4.webp" alt="..." />
+                        <div class="card-body p-2">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Reebok Nano X2 TR Adventure</h5>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <span>$125.00 50% $250.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer pb-2 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid pt-5 pb-3 mt-5" data-aos="fade-up" id="footer">
+
+        <div class="row small px-4">
+
+            <div class="col-md-3">
+                <h5 class="text-white my-4"><b>Trending</b></h5>
+                <p><a class="text-muted" href="#">Men's Collection</a></p>
+                <p><a class="text-muted" href="#">Women;s Collections</a></p>
+                <p><a class="text-muted" href="#">Childrens</a></p>
+                <p><a class="text-muted" href="#">Teenagers</a></p>
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="text-white my-4"><b>Men's</b></h5>
+                <p><a class="text-muted" href="#">Casual Shoes</a></p>
+                <p><a class="text-muted" href="#">Sleepers</a></p>
+                <p><a class="text-muted" href="#">Sport Shoes</a></p>
+                <p><a class="text-muted" href="#">Party-wears</a></p>
+                
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="text-white mt-4"><b>Womens</b></h5>
+                <p><a class="text-muted" href="#">Casual Shoes</a></p>
+                <p><a class="text-muted" href="#">Sandals</a></p>
+                <p><a class="text-muted" href="#">Sport Shoes</a></p>
+                <p><a class="text-muted" href="#">Ballerinas</a></p>
+                
+            </div>
+
+            <div class="col-md-3">
+                <h5 class="text-white my-4"><b>Pages</b></h5>
+                <p><a class="text-muted" href="#">About Us</a></p>
+                <p><a class="text-muted" href="#">Contact Us</a></p>
+                <p><a class="text-muted" href="#">DMCA</a></p>
+                <p><a class="text-muted" href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="copyright py-2 text-white text-center">
+        <h6>Copyrights Ⓒ Sneaker Company Fall Limited Edition 2023. All rights reserved.</h6>
+    </div>
+
+
+
 </body>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    $('#owl-cor1').owlCarousel({
+      loop: true,
+      margin: 15,
+      nav: true,
+      navText: ["<i class='fa-solid fa-angles-left'></i>", "<i class='fa-solid fa-angles-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+
+    AOS.init({
+      offset: 170, // offset (in px) from the original trigger point
+    delay: 30, // values from 0 to 3000, with step 50ms
+    duration: 700, // values from 0 to 3000, with step 50ms
+    });
+
+</script>
+<!--Bootstrap JS Bundle-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
+
 </html>
