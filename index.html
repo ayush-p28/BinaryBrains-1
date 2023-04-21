@@ -56,6 +56,9 @@
         .blog-image img {
             background-color: hsl(26, 95%, 49%);
         }
+        .blog-image2 img {
+            background-color: hsl(26, 95%, 49%);
+        }
 
         .img-slid {
             border-radius: 30px;
@@ -63,6 +66,9 @@
 
         .blog-image {
             margin-left: -80px;
+        }
+        .blog-image2 {
+            margin-top: -80px;
         }
 
         .btn-orange {
@@ -125,7 +131,6 @@
     .timez:hover h5{
       color:#d20909;
     }
-    
     </style>
 </head>
 
@@ -184,9 +189,12 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col offset-md-1">
-                    <div class="bg-white mb-4 d-lg-flex shadow img-slid border border-warning">
+                    <div class="bg-white mt-3 mt-lg-0 mb-4 d-lg-flex shadow img-slid border border-warning">
                         <div class="blog-image d-none d-lg-block align-items-center p-3" data-aos="slide-right">
                             <img src="images/download (1)-min.webp" alt="" width="850px" class="img-fluid img-slid shadow">
+                        </div>
+                        <div class="blog-image2 d-block d-lg-none align-items-center p-3" data-aos="slide-right">
+                            <img src="images/download (1)-min.webp" alt="" width="550px" class="img-fluid img-slid shadow">
                         </div>
                         <!-- <div class="d-block d-lg-none align-items-center p-3">
 							<img src="shadowas.jpeg" alt="" class="img-fluid img-slid shadow" height="150px">
@@ -662,7 +670,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
           items: 1
         },
         600: {
-          items: 3
+          items: 1
         },
         1000: {
           items: 4
