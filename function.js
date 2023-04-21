@@ -1,0 +1,1 @@
+$("#owl-cor1").owlCarousel({loop:!0,margin:15,nav:!0,navText:["<i class='fa-solid fa-angles-left'></i>","<i class='fa-solid fa-angles-right'></i>"],responsive:{0:{items:1},600:{items:1},1e3:{items:4}}}),AOS.init({offset:170,delay:30,duration:700});

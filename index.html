@@ -24,114 +24,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <style>
-        body {
-            background-color: hsl(25, 100%, 94%);
-            /* background-color: rgb(154, 154, 236); */
-        }
-
-        .apna_color {
-            color: hsl(26, 100%, 48%);
-        }
-
-        #mainNav a:hover {
-            color: hsl(26, 100%, 55%);
-        }
-
-        .nav-link:after {
-            content: "";
-            display: block;
-            height: 3px;
-            background: hsl(26, 95%, 49%);
-            transition: width 0.3s ease 0s, left 0.3s ease 0s;
-            width: 0;
-        }
-
-        .nav-link:hover:after {
-            color: hsl(26, 95%, 49%);
-            width: 100%;
-        }
-
-        .blog-image img {
-            background-color: hsl(26, 95%, 49%);
-        }
-        .blog-image2 img {
-            background-color: hsl(26, 95%, 49%);
-        }
-
-        .img-slid {
-            border-radius: 30px;
-        }
-
-        .blog-image {
-            margin-left: -80px;
-        }
-        .blog-image2 {
-            margin-top: -80px;
-        }
-
-        .btn-orange {
-            color: white;
-            background-color: hsl(26, 95%, 49%);
-
-        }
-
-        #cart_btn:hover {
-            color: grey;
-        }
-        #footer p{
-            margin: 5px 0px;
-        }
-        #footer{
-            background-image: url("images/world_pattern.svg");
-            background-color: #2D2B3A;
-            background-repeat: no-repeat;
-            background-position: center bottom;
-        }
-        .copyright{
-            background-color: #2D2B3A;
-        }
-
-        .section-head {
-      color: #000;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-head:after {
-      background: #e74c3c;
-      content: "";
-      display: block;
-      width: 100px;
-      height: 3px;
-      margin: 20px auto;
-    }
-
-        .timez {
-      border-top: 5px solid #d20909;
-      position: relative;
-      bottom: 0;
-      transition: bottom ease 0.5s;
-    }
-
-    .timez img {
-      padding: 24px;
-      transition: all linear 0.25s;
-    }
-
-    .timez:hover img {
-      padding: 30px;
-    }
-
-    .timez:hover {
-      bottom: -10px;
-      background-color: #f5f0f0;
-    }
-    .timez:hover h5{
-      color:#d20909;
-    }
-    </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -659,32 +552,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script>
-    $('#owl-cor1').owlCarousel({
-      loop: true,
-      margin: 15,
-      nav: true,
-      navText: ["<i class='fa-solid fa-angles-left'></i>", "<i class='fa-solid fa-angles-right'></i>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 4
-        }
-      }
-    })
+<script src="function.js"></script>
 
-    AOS.init({
-      offset: 170, // offset (in px) from the original trigger point
-    delay: 30, // values from 0 to 3000, with step 50ms
-    duration: 700, // values from 0 to 3000, with step 50ms
-    });
-
-</script>
 <!--Bootstrap JS Bundle-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
